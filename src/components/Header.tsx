@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../assets/logo.svg';
+import { Link } from 'react-router-dom';
 
 
 const Header: React.FC = () => {
@@ -10,9 +11,9 @@ const Header: React.FC = () => {
       <div className="container mx-auto">
         <div className="relative -mx-4 flex items-center justify-between">
           <div className="w-60 max-w-full px-4">
-            <a href="#" className="block w-full py-5">
+            <Link to="/" className="block w-full py-5">
               <img src={logo} alt="Logo" className='rounded-2xl'/>
-            </a>
+            </Link>
           </div>
           <div className="flex w-full items-center justify-between px-4">
             <div>
@@ -35,12 +36,12 @@ const Header: React.FC = () => {
               >
                 <ul className="block lg:flex">
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/"
                       className="flex py-2 text-base font-medium text-body-color hover:text-dark lg:ml-12 lg:inline-flex dark:text-gray-500 dark:hover:text-white"
                     >
                       Home
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a
@@ -51,12 +52,12 @@ const Header: React.FC = () => {
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/storage"
                       className="flex py-2 text-base font-medium text-body-color hover:text-dark lg:ml-12 lg:inline-flex dark:text-gray-500 dark:hover:text-white"
                     >
                       Your Images
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>
