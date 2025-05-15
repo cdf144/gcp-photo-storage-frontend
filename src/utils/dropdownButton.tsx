@@ -19,7 +19,7 @@ const DropdownButton: React.FC = () => {
 
     return (
         <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4 ">
+            <div className="w-full px-4">
                 <div className="py-3 text-center">
                     <div ref={dropdownRef} className="relative mb-8 inline-block text-left">
                         <button
@@ -41,25 +41,25 @@ const DropdownButton: React.FC = () => {
                             </span>
                         </button>
                         <div
-                            className={`absolute left-0 z-100 mt-2 w-full rounded-md bg-white shadow-1 transition-all dark:shadow-box-dark ${
-                                dropdownOpen ? "top-full opacity-100 visible" : "top-[110%] invisible opacity-0"
+                            className={`shadow-1 dark:shadow-box-dark absolute left-0 z-100 mt-2 w-full rounded-md bg-white transition-all ${
+                                dropdownOpen ? "visible top-full opacity-100" : "invisible top-[110%] opacity-0"
                             }`}
                         >
                             <a
                                 href="#"
-                                className="block px-5 py-2 text-base text-body-color hover:bg-blue-100 hover:text-primary dark:text-dark-6 dark:hover:bg-primary/5"
+                                className="text-body-color hover:text-primary dark:text-dark-6 dark:hover:bg-primary/5 block px-5 py-2 text-base hover:bg-blue-100"
                             >
                                 Save in your storage
                             </a>
                             <a
                                 href="#"
-                                className="block px-5 py-2 text-base text-body-color hover:bg-blue-100 hover:text-primary dark:text-dark-6 dark:hover:bg-primary/5"
+                                className="text-body-color hover:text-primary dark:text-dark-6 dark:hover:bg-primary/5 block px-5 py-2 text-base hover:bg-blue-100"
                             >
                                 Label the image
                             </a>
                             <a
                                 href="#"
-                                className="block px-5 py-2 text-base text-body-color hover:bg-blue-100 hover:text-primary dark:text-dark-6 dark:hover:bg-primary/5"
+                                className="text-body-color hover:text-primary dark:text-dark-6 dark:hover:bg-primary/5 block px-5 py-2 text-base hover:bg-blue-100"
                             >
                                 Image to text
                             </a>

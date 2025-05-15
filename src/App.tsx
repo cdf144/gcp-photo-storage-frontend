@@ -3,7 +3,7 @@ import Home from "./components/Home.tsx";
 
 function App() {
     return (
-        <div className="flex flex-col h-screen">
+        <div className="flex h-screen flex-col">
             <Header />
             <Home />
         </div>

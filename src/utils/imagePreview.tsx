@@ -13,22 +13,22 @@ const ImagePreview: React.FC<ImagePreviewProps> = ({ file, uploadedBytes, onRemo
     const imageUrl = URL.createObjectURL(file);
 
     return (
-        <div className="max-w-full p-4 flex flex-col items-center bg-[#1E293B] rounded-lg text-white space-y-4">
-            <img src={imageUrl} alt={file.name} className="w-full h-48 object-fill rounded-lg" />
-            <div className="flex justify-between space-x-10 items-center">
+        <div className="flex max-w-full flex-col items-center space-y-4 rounded-lg bg-[#1E293B] p-4 text-white">
+            <img src={imageUrl} alt={file.name} className="h-48 w-full rounded-lg object-fill" />
+            <div className="flex items-center justify-between space-x-10">
                 <div>
-                    <p className="text-sm font-semibold truncate">{file.name}</p>
+                    <p className="truncate text-sm font-semibold">{file.name}</p>
                     <p className="text-xs text-gray-400">{fileSizeKB} KB</p>
                 </div>
                 <div className="text-xs text-blue-400">{uploadedPercent}% uploaded</div>
             </div>
 
-            <div className="w-full bg-gray-700 h-2 rounded">
-                <div className="bg-blue-500 h-2 rounded" style={{ width: `${uploadedPercent}%` }} />
+            <div className="h-2 w-full rounded bg-gray-700">
+                <div className="h-2 rounded bg-blue-500" style={{ width: `${uploadedPercent}%` }} />
             </div>
             <div>
                 <button
-                    className="flex items-center cursor-pointer justify-center gap-2 rounded-lg border border-stroke px-3 py-2 text-sm font-medium text-dark-4 duration-200 hover:bg-[#0F172A] hover:text-white dark:border-dark-3 dark:text-dark-6"
+                    className="border-stroke text-dark-4 dark:border-dark-3 dark:text-dark-6 flex cursor-pointer items-center justify-center gap-2 rounded-lg border px-3 py-2 text-sm font-medium duration-200 hover:bg-[#0F172A] hover:text-white"
                     onClick={onRemove}
                 >
                     Remove upload

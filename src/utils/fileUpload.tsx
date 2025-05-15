@@ -39,8 +39,8 @@ const FileUpload: React.FC = () => {
         <section className="bg-dark py-15">
             <div className="container">
                 <div className="relative mx-auto w-full max-w-[570px] rounded-[20px] bg-white/10 p-4 shadow-lg">
-                    <div className="relative z-10 flex min-h-[328px] items-center justify-center rounded-2xl border border-dashed border-dark-6 bg-white/10 p-6 md:p-10">
-                        <div className="text-center w-full">
+                    <div className="border-dark-6 relative z-10 flex min-h-[328px] items-center justify-center rounded-2xl border border-dashed bg-white/10 p-6 md:p-10">
+                        <div className="w-full text-center">
                             <input
                                 type="file"
                                 ref={fileInputRef}
@@ -49,7 +49,7 @@ const FileUpload: React.FC = () => {
                                 accept=".png,.jpg,.jpeg,.webp,.svg"
                             />
                             <div
-                                className="mx-auto mb-5 flex aspect-square w-[68px] items-center justify-center rounded-full bg-white text-dark cursor-pointer"
+                                className="text-dark mx-auto mb-5 flex aspect-square w-[68px] cursor-pointer items-center justify-center rounded-full bg-white"
                                 onClick={handleButtonClick}
                             >
                                 <svg
@@ -91,7 +91,7 @@ const FileUpload: React.FC = () => {
                                     <span className="text-base text-gray-400"> THEN </span>
                                     <div className="block h-px w-full bg-white/10"></div>
                                 </div>
-                                <div className="w-full z-10">
+                                <div className="z-10 w-full">
                                     <DropdownButton />
                                 </div>
                             </div>

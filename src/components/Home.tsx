@@ -24,13 +24,13 @@ const Home: React.FC = () => {
     ];
 
     return (
-        <div className="relative flex flex-col bg-white pt-10 dark:bg-[#0F172A] items-center">
+        <div className="relative flex flex-col items-center bg-white pt-10 dark:bg-[#0F172A]">
             <div className="container mx-auto">
                 <div className="-mx-4 flex flex-wrap items-center">
                     {/* Left side content */}
-                    <div className="w-full flex flex-col px-4 lg:w-5/12">
+                    <div className="flex w-full flex-col px-4 lg:w-5/12">
                         <div>
-                            <p className="max-w-[520px] pt-5 text-base text-justify text-white">
+                            <p className="max-w-[520px] pt-5 text-justify text-base text-white">
                                 Our online platform offers seamless image storage, advanced labeling, and image-to-text
                                 processing. Easily upload and manage images in a secure cloud, annotate with precision
                                 for data analysis, and extract text accurately. Unlock the power of your visual data
@@ -49,7 +49,7 @@ const Home: React.FC = () => {
                     <div className="w-full px-4 lg:w-6/12">
                         <div className="lg:ml-auto lg:text-right">
                             <div className="relative z-10 inline-block">
-                                <img src="src\assets\background.png" className="max-w-full lg:ml-auto rounded-2xl" />
+                                <img src="src\assets\background.png" className="max-w-full rounded-2xl lg:ml-auto" />
                                 <span className="absolute -bottom-8 -left-8 z-[-1]">
                                     <svg
                                         width="93"
@@ -76,28 +76,28 @@ const Home: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col items-center mt-10">
+            <div className="mt-10 flex flex-col items-center">
                 <h6 className="mb-6 flex items-center text-center text-4xl font-bold text-white">OUR FEATURES</h6>
-                <section className="bg-gray-2 mt-5 dark:bg-dark">
+                <section className="bg-gray-2 dark:bg-dark mt-5">
                     <div className="container mx-auto">
                         <div className="-mx-4 flex flex-wrap">
                             {cards.map((card, index) => (
                                 <div key={index} className="w-full px-4 md:w-1/2 xl:w-1/3">
-                                    <div className="mb-10 overflow-hidden rounded-lg bg-[#1B2532] shadow-1 duration-300 hover:shadow-3">
-                                        <div className="max-w-md h-52 overflow-hidden">
+                                    <div className="shadow-1 hover:shadow-3 mb-10 overflow-hidden rounded-lg bg-[#1B2532] duration-300">
+                                        <div className="h-52 max-w-md overflow-hidden">
                                             <img
                                                 src={card.image}
                                                 alt="card image"
-                                                className="w-full h-full object-cover"
+                                                className="h-full w-full object-cover"
                                             />
                                         </div>
                                         <div className="p-8 text-center sm:p-9 md:p-7 xl:p-9">
                                             <h3>
-                                                <a className="mb-4 block text-xl font-semibold text-white hover:text-primary sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px">
+                                                <a className="hover:text-primary 2xl:text-[22px mb-4 block text-xl font-semibold text-white sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl">
                                                     {card.title}
                                                 </a>
                                             </h3>
-                                            <p className="mb-7 text-base leading-relaxed text-gray-500 ">
+                                            <p className="mb-7 text-base leading-relaxed text-gray-500">
                                                 {card.description}
                                             </p>
                                         </div>
@@ -109,10 +109,10 @@ const Home: React.FC = () => {
                 </section>
             </div>
             <div>
-                <div className="flex flex-col items-center mt-10">
+                <div className="mt-10 flex flex-col items-center">
                     <h6 className="mb-6 flex items-center text-center text-4xl font-bold text-white">OUR PARTNER</h6>
                     <a href="https://cloud.google.com/" target="_blank" className="block py-3">
-                        <img src="src\assets\gcp.png" alt="gcp" className="max-w-xs max-h-xs" />
+                        <img src="src\assets\gcp.png" alt="gcp" className="max-h-xs max-w-xs" />
                     </a>
                 </div>
             </div>
