@@ -1,11 +1,13 @@
 import React, { useRef, useState, useEffect } from "react";
 import DropdownButton from "./dropdownButton";
 import ImagePreview from "./imagePreview";
+import SuccessMessage from "./successMessage";
 
 const FileUpload: React.FC = () => {
     const fileInputRef = useRef<HTMLInputElement | null>(null);
     const [file, setFile] = useState<File | null>(null);
     const [uploadedBytes, setUploadedBytes] = useState(0);
+    const [messageVisible, setMessageVisible] = useState(false);
 
     const handleButtonClick = () => {
         fileInputRef.current?.click();
@@ -16,6 +18,30 @@ const FileUpload: React.FC = () => {
         if (files && files.length > 0) {
             setFile(files[0]);
             setUploadedBytes(0);
+        }
+    };
+
+    const uploadFile = async (file: File) => {
+        const formData = new FormData();
+        formData.append("image", file);
+        try {
+            const response = await fetch("https://upload-image-function-432052083194.asia-southeast1.run.app", {
+                method: "POST",
+                body: formData,
+            });
+            if (!response.ok) {
+                throw new Error("File upload failed");
+            }
+            setMessageVisible(true);
+            console.log("File uploaded successfully:");
+        } catch (error) {
+            console.error("Error uploading file:", error);
+        }
+    };
+
+    const handleUpload = () => {
+        if (file) {
+            uploadFile(file);
         }
     };
 
@@ -92,13 +118,19 @@ const FileUpload: React.FC = () => {
                                     <div className="block h-px w-full bg-white/10"></div>
                                 </div>
                                 <div className="z-10 w-full">
-                                    <DropdownButton />
+                                    <DropdownButton onClick={handleUpload}/>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            {messageVisible && (
+                <SuccessMessage
+                    message="Image added to collection successfully!"
+                    duration={3000}
+                />
+            )}
         </section>
     );
 };
