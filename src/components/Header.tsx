@@ -53,10 +53,10 @@ const Header: React.FC = () => {
                   </li>
                   <li>
                     <Link
-                      to="/storage"
+                      to="/collections"
                       className="flex py-2 text-base font-medium text-body-color hover:text-dark lg:ml-12 lg:inline-flex dark:text-gray-500 dark:hover:text-white"
                     >
-                      Your Images
+                      Your Collections
                     </Link>
                   </li>
                 </ul>

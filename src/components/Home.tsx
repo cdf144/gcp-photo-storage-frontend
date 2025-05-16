@@ -108,14 +108,6 @@ const Home: React.FC = () => {
                     </div>
                 </section>
             </div>
-            <div>
-                <div className="mt-10 flex flex-col items-center">
-                    <h6 className="mb-6 flex items-center text-center text-4xl font-bold text-white">OUR PARTNER</h6>
-                    <a href="https://cloud.google.com/" target="_blank" className="block py-3">
-                        <img src="src\assets\gcp.png" alt="gcp" className="max-h-xs max-w-xs" />
-                    </a>
-                </div>
-            </div>
         </div>
     );
 };
