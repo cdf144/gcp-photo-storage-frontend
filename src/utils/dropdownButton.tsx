@@ -4,7 +4,7 @@ interface DropdownButtonProps {
     onClick: () => void;
 }
 
-const DropdownButton: React.FC<DropdownButtonProps> = ({onClick}) => {
+const DropdownButton: React.FC<DropdownButtonProps> = ({ onClick }) => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -54,13 +54,13 @@ const DropdownButton: React.FC<DropdownButtonProps> = ({onClick}) => {
                                     onClick();
                                     setDropdownOpen(false);
                                 }}
-                                className="text-body-color w-full cursor-pointer hover:text-primary dark:text-dark-6 dark:hover:bg-primary/5 block px-5 py-2 text-base hover:bg-blue-100"
+                                className="text-body-color hover:text-primary dark:text-dark-6 dark:hover:bg-primary/5 block w-full cursor-pointer px-5 py-2 text-base hover:bg-blue-100"
                             >
                                 Label the image
                             </button>
                             <button
                                 onClick={() => setDropdownOpen(false)}
-                                className="text-body-color w-full cursor-pointer hover:text-primary dark:text-dark-6 dark:hover:bg-primary/5 block px-5 py-2 text-base hover:bg-blue-100"
+                                className="text-body-color hover:text-primary dark:text-dark-6 dark:hover:bg-primary/5 block w-full cursor-pointer px-5 py-2 text-base hover:bg-blue-100"
                             >
                                 Image to text
                             </button>

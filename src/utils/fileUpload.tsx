@@ -118,19 +118,14 @@ const FileUpload: React.FC = () => {
                                     <div className="block h-px w-full bg-white/10"></div>
                                 </div>
                                 <div className="z-10 w-full">
-                                    <DropdownButton onClick={handleUpload}/>
+                                    <DropdownButton onClick={handleUpload} />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            {messageVisible && (
-                <SuccessMessage
-                    message="Image added to collection successfully!"
-                    duration={3000}
-                />
-            )}
+            {messageVisible && <SuccessMessage message="Image added to collection successfully!" duration={3000} />}
         </section>
     );
 };
