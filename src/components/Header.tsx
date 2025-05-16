@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 const Header: React.FC = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false);
+    const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
     <header className="flex w-full items-center bg-white dark:bg-[#0F172A]">
