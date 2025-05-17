@@ -62,12 +62,14 @@ const Header: React.FC = () => {
                             </nav>
                         </div>
                         <div className="hidden justify-end pr-16 sm:flex lg:pr-0">
-                            <a
-                                href="#"
-                                className="px-7 py-3 text-base font-medium text-gray-700 hover:text-gray-500 dark:text-white"
-                            >
-                                Login
-                            </a>
+                            <Link to="/login">
+                                <a
+                                    href="#"
+                                    className="bg-blue-700 px-7 py-3 text-base font-medium text-gray-700 hover:text-gray-500 dark:text-white"
+                                >
+                                    Login
+                                </a>
+                            </Link>
                             <a
                                 href="#"
                                 className="rounded-md bg-blue-700 px-7 py-3 text-base font-medium text-white hover:bg-blue-900"
